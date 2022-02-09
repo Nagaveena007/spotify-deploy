@@ -17,7 +17,7 @@ const mapDispatchToProps = (dispatch) => ({
 
 const AlbumCard = ({ song, setLike, likedSongs }) => {
   const toggleLike = (element) => {
-    if (likedSongs.filter((el) => el.id === song?.id).length < 1) {
+    if (likedSongs?.filter((el) => el?.id === song?.id).length < 1) {
       setLike(element, "LIKE");
     } else {
       setLike(element, "REMOVE_LIKE");
