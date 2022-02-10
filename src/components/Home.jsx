@@ -97,17 +97,17 @@ const Home = ({
           hipHopRandomArtists.push(artist);
         }
       }
-      if (rockSongs.length > 4) {
+      if (rockSongs?.length > 4) {
       } else {
         for (let j = 0; j < rockRandomArtists.length; j++)
           setFreshHome(rockRandomArtists[j], "SET_ROCK_SONGS");
       }
-      if (popSongs.length > 4) {
+      if (popSongs?.length > 4) {
       } else {
         for (let k = 0; k < popRandomArtists.length; k++)
           setFreshHome(popRandomArtists[k], "SET_POP_SONGS");
       }
-      if (hipHopSongs.length > 4) {
+      if (hipHopSongs?.length > 4) {
       } else {
         for (let l = 0; l < hipHopRandomArtists.length; l++)
           setFreshHome(hipHopRandomArtists[l], "SET_HIPHOP_SONGS");
@@ -145,7 +145,7 @@ const Home = ({
             <div id="searchResults">
               <h2>Search Results</h2>
               <Row className="row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 imgLinks py-3">
-                {searchArray.map((song) => (
+                {searchArray?.map((song) => (
                   <AlbumCard
                     song={song}
                     key={song?.id}
@@ -167,7 +167,7 @@ const Home = ({
                   className="row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 imgLinks py-3"
                   id="rockSection"
                 >
-                  {rockSongs.map((song) => (
+                  {rockSongs?.map((song) => (
                     <AlbumCard
                       song={song}
                       key={song?.id}
@@ -201,7 +201,7 @@ const Home = ({
                   className="row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 imgLinks py-3"
                   id="hipHopSection"
                 >
-                  {hipHopSongs.map((song) => (
+                  {hipHopSongs?.map((song) => (
                     <AlbumCard song={song} key={song?.id} />
                   ))}
                 </Row>
